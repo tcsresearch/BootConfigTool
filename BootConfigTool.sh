@@ -1,44 +1,21 @@
-# BootConfigTool - Changes between graphical and commandline boot types
-#
-## TODO: Setup case for usage.
+# BootConfigTool-ng 
+# a.k.a. BCT
 
-function BootConfigTool_DisplayBanner() {
-	echo "$0."
-	echo " "
-}
+# Define our Functions File
+BCT_FuncFile="$(pwd)/BootConfigTool.bfunc"
 
-function BootConfigTool_Usage() {
-	echo "Usage: "	
-	echo " $0 --get:				Displays current config."
-	echo " $0 --set [ commandline | graphical ]: 	Sets boot type to the specified type."
-	echo " "
-}
-
-### Define Main Functions ###
-	
-function BootConfigTool_GetCurrentConfig() {
-	echo "Current Boot Type Is: "
-	systemctl get-default
-}
-
-function BootConfigtool_SetCommandLine() {
-	echo "Setting Boot Type To: Commandline..."
-	systemctl set-default multi-user.target
-	echo " "
-}
+# Source Our Config File
+if -f [ $BCT_FuncFile ]; then 
+  source $BCT_FuncFile
+else
+  echo "EROR: Functions File $BCT_FuncFile Not Found!"
+  break
+fi
 
 
-function BootConfigTool_SetGraphical() {
-	echo "Setting Boot Type To: Graphical..."
-	systemctl set-default graphical.target
-	echo " "
-}
+### Main Program ###
+BootConfigTool_DisplayBanner
+BootConfigTool_GetCurrentConfig
 
-echo " Not Fully Implemented Yet."
-echo " Use one of the functions below to call manually for now."
-echo "    BootConfigTool_SetCommandLine"
-echo "    BootConfigTool_SetGraphical"
-echo " "
-echo " To see current setting, call the BootConfigTool_GetCurrentConfig function."
-echo " "
-
+# BootConfigTool_Usage
+BootConfigTool_TempUsageFix
