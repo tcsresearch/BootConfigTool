@@ -8,7 +8,7 @@ BCT_FuncFile="$(pwd)/BootConfigTool.bfunc"
 if -f [ $BCT_FuncFile ]; then 
   source $BCT_FuncFile
 else
-  echo "EROR: Functions File $BCT_FuncFile Not Found!"
+  echo "ERROR: Functions File $BCT_FuncFile Not Found!"
   break
 fi
 
