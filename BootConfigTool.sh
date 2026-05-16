@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # BootConfigTool-ng 
 # a.k.a. BCT
 
@@ -5,8 +7,8 @@
 BCT_FuncFile="$(pwd)/BootConfigTool.bfunc"
 
 # Source Our Config File
-if -f [ $BCT_FuncFile ]; then 
-  source $BCT_FuncFile
+if -f [ "$BCT_FuncFile" ]; then 
+  source "$BCT_FuncFile"
 else
   echo "ERROR: Functions File $BCT_FuncFile Not Found!"
   break
