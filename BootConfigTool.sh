@@ -7,13 +7,15 @@
 BCT_FuncFile="$(pwd)/BootConfigTool.bfunc"
 
 # Source Our Config File
-if [ -f "$BCT_FuncFile" ]; then
+if [ "-f" "$BCT_FuncFile" ]; then
     # shellcheck source=/dev/null
     source "$BCT_FuncFile"
 else
     echo "ERROR: Functions File $BCT_FuncFile Not Found!"
-    break
+    # Only use 'break' if this code is inside a for/while loop
+    # break 
 fi
+
 
 
 
