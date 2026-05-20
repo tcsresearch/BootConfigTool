@@ -12,8 +12,6 @@ if [ "-f" "$BCT_FuncFile" ]; then
     source "$BCT_FuncFile"
 else
     echo "ERROR: Functions File $BCT_FuncFile Not Found!"
-    # Only use 'break' if this code is inside a for/while loop
-    # break 
 fi
 
 
