@@ -8,12 +8,12 @@ BCT_FuncFile="$(pwd)/BootConfigTool.bfunc"
 
 function BCT_SourceFuncFile() {
     # Source Our Config File
-    if [ "-f" "$BCT_FuncFile" ]; then
+    if [ -f "$BCT_FuncFile" ]; then
         # shellcheck source=/dev/null
         source "$BCT_FuncFile"
     else
         echo "ERROR: Functions File $BCT_FuncFile Not Found!"
-        break
+         return # Per shellcheck, using in lieu of 'break'.
     fi
 
 
