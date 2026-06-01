@@ -15,7 +15,7 @@ function BCT_SourceFuncFile() {
         echo "ERROR: Functions File $BCT_FuncFile Not Found!"
          return # Per shellcheck, using in lieu of 'break'.
     fi
-
+}
 
 
 
