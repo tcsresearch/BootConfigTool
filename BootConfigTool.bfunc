@@ -14,7 +14,9 @@ function BootConfigTool_Usage() {
 	echo " "
 }
 
-### Define Main Functions ###
+#########################################################################################################################
+### Define Main Functions ###																							#
+#########################################################################################################################
 	
 # Show Config #
 function BootConfigTool_GetCurrentConfig() {
@@ -51,8 +53,32 @@ function BootConfigTool_SetGraphical() {
 }
 
 
+#########################################################################################################################
+### CASE Statement ###																									#
+#########################################################################################################################
 
-# Show Usage #
+function ShowCase() {
+	case "$1" in
+    "GetCurrentConfig")
+        BootConfigTool_GetCurrentConfig
+        ;;
+    "SetCommandLine")
+        BootConfigtool_SetCommandLine
+        ;;
+    "SetGraphical")
+        BootConfigTool_SetGraphical
+        ;;
+    *)
+        echo "Usage: $0 {GetCurrentConfig|SetCommandLine|SetGraphical}"
+        exit 1
+        ;;
+esac
+}
+
+#########################################################################################################################
+### Usage ###																											#
+#########################################################################################################################
+
 function BootConfigTool_TempUsageFix() {
 	echo " Not Fully Implemented Yet."
 	echo " Use one of the functions below to call manually for now."
