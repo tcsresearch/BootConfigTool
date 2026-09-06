@@ -33,3 +33,4 @@ function BCT_SourceFuncFile() {
 
 # Show CASE Statement
   BootConfigTool_ShowCase
+  NewLine
