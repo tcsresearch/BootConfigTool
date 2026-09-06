@@ -4,7 +4,6 @@
 
 function BootConfigTool_DisplayBanner() {
 	echo "BootConfigTool (BCT) - A Utility To Change Boot Modes."
-	echo " "
 }
 
 function BootConfigTool_Usage() {
