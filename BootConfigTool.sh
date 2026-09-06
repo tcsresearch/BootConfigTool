@@ -23,7 +23,9 @@ function BCT_SourceFuncFile() {
 BCT_SourceFuncFile # Run Function Within This Script
 
 BootConfigTool_DisplayBanner
+NewLine
 BootConfigTool_GetCurrentConfig
+NewLine
 
 # BootConfigTool_Usage
 # BootConfigTool_TempUsageFix
