@@ -26,4 +26,7 @@ BootConfigTool_DisplayBanner
 BootConfigTool_GetCurrentConfig
 
 # BootConfigTool_Usage
-BootConfigTool_TempUsageFix
+# BootConfigTool_TempUsageFix
+
+# Show CASE Statement
+BootConfigTool_ShowCase
