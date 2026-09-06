@@ -83,7 +83,7 @@ function BootConfigTool_ShowCase() {
         BootConfigTool_SetGraphical
         ;;
     *)
-        echo "Usage: $0 {GetCurrentConfig|SetCommandLine|SetGraphical}"
+        echo "Usage: $0 [GetCurrentConfig|SetCommandLine|SetGraphical]"
         exit 1
         ;;
 esac
