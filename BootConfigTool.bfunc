@@ -57,7 +57,7 @@ function BootConfigTool_SetGraphical() {
 ### CASE Statement ###																									#
 #########################################################################################################################
 
-function ShowCase() {
+function BootConfigTool_ShowCase() {
 	case "$1" in
     "GetCurrentConfig")
         BootConfigTool_GetCurrentConfig
