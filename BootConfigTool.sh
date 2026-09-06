@@ -20,15 +20,16 @@ function BCT_SourceFuncFile() {
 
 
 ### Main Program ###
-BCT_SourceFuncFile # Run Function Within This Script
+  BCT_SourceFuncFile # Run Function Within This Script
 
-BootConfigTool_DisplayBanner
-NewLine
-BootConfigTool_GetCurrentConfig
-NewLine
+  BootConfigTool_DisplayBanner
+  DisplayLine
+  NewLine
+  BootConfigTool_GetCurrentConfig
+  NewLine
 
 # BootConfigTool_Usage
 # BootConfigTool_TempUsageFix
 
 # Show CASE Statement
-BootConfigTool_ShowCase
+  BootConfigTool_ShowCase
